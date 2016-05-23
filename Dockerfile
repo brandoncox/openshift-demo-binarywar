@@ -4,6 +4,8 @@ USER root
 RUN sudo apt-get update
 RUN sudo apt-get -y install curl
 EXPOSE 8080 8888
-USER 1001
-#RUN curl https://raw.githubusercontent.com/VeerMuchandi/ps/master/deployments/ROOT.war -o $JBOSS_HOME/standalone/deployments/ROOT.war
+
+RUN curl https://raw.githubusercontent.com/VeerMuchandi/ps/master/deployments/ROOT.war -o $JBOSS_HOME/standalone/deployments/ROOT.war
 RUN curl https://raw.githubusercontent.com/VeerMuchandi/ps/master/deployments/ROOT.war -o /opt/sw/jboss/
+
+USER 1001
