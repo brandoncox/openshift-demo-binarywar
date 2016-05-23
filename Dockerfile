@@ -4,9 +4,12 @@ USER root
 RUN sudo apt-get update
 RUN sudo apt-get -y install curl
 EXPOSE 8080 8888
+RUN chmod -R 777 /root
 
 # RUN curl https://raw.githubusercontent.com/VeerMuchandi/ps/master/deployments/ROOT.war -o $JBOSS_HOME/standalone/deployments/ROOT.war
 RUN curl https://raw.githubusercontent.com/VeerMuchandi/ps/master/deployments/ROOT.war -o /opt/sw/jboss/ROOT.war
 
-CMD [ "echo", "hi" ]
+CMD [ "./opt/sw/jboss/jboss/jboss-eap-6.2/bin/standalone.sh" ]
+#CMD ["/root/startup.sh","-D"]`
+#CMD [ "echo", "hi" ]
 USER 1001
