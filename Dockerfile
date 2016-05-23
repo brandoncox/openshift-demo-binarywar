@@ -6,6 +6,6 @@ RUN sudo apt-get -y install curl
 EXPOSE 8080 8888
 
 # RUN curl https://raw.githubusercontent.com/VeerMuchandi/ps/master/deployments/ROOT.war -o $JBOSS_HOME/standalone/deployments/ROOT.war
-RUN sudo curl https://raw.githubusercontent.com/VeerMuchandi/ps/master/deployments/ROOT.war -o /opt/sw/jboss/
+RUN curl https://raw.githubusercontent.com/VeerMuchandi/ps/master/deployments/ROOT.war -o /opt/sw/jboss/ROOT.war
 
 USER 1001
