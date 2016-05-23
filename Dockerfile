@@ -2,7 +2,7 @@
 FROM karsuncloud/eoffer
 USER root
 RUN sudo apt-get update
-RUN sudo apt-get install curl
+RUN sudo apt-get -y install curl
 EXPOSE 8080 8888
 USER 1001
 RUN curl https://raw.githubusercontent.com/VeerMuchandi/ps/master/deployments/ROOT.war -o $JBOSS_HOME/standalone/deployments/ROOT.war
