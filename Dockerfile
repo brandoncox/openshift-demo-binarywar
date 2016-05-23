@@ -8,5 +8,5 @@ EXPOSE 8080 8888
 # RUN curl https://raw.githubusercontent.com/VeerMuchandi/ps/master/deployments/ROOT.war -o $JBOSS_HOME/standalone/deployments/ROOT.war
 RUN curl https://raw.githubusercontent.com/VeerMuchandi/ps/master/deployments/ROOT.war -o /opt/sw/jboss/ROOT.war
 
-CMD["echo 'hi'"]
+CMD [ "echo", "hi" ]
 USER 1001
